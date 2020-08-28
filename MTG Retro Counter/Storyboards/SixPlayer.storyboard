@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Six Player View Controller-->
+        <scene sceneID="8Cn-j1-78M">
+            <objects>
+                <viewController storyboardIdentifier="SixPlayerVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GmM-eB-WKU" customClass="SixPlayerViewController" customModule="MTG_Retro_Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="emK-Tm-uae">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="phe-XW-Sfd">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="JHr-XK-T7q">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="258"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="35N-CQ-LFJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="258"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </tableView>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NPR-uB-Zuu">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="258"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </tableView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="UUI-HZ-PL7">
+                                        <rect key="frame" x="0.0" y="258" width="414" height="258"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FC9-g1-A7E">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="258"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </tableView>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="deA-vR-xWB">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="258"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </tableView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1hI-RI-Hv0">
+                                        <rect key="frame" x="0.0" y="516" width="414" height="258"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0CR-lx-kS2">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="258"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </tableView>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SDx-uH-36A">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="258"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </tableView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0X-tC-gdf">
+                                <rect key="frame" x="222" y="361" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="cgh-3h-8FB"/>
+                                    <constraint firstAttribute="height" constant="25" id="r35-cN-97Y"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="floatingbuttonrotated"/>
+                                <connections>
+                                    <segue destination="e5o-pQ-UqQ" kind="show" identifier="PlayerFourSegue" id="txD-aW-raf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdf-fm-E4J">
+                                <rect key="frame" x="167" y="822" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="Jh0-Q6-Fmo"/>
+                                    <constraint firstAttribute="height" constant="25" id="KLN-0A-Dk6"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="floatingbuttonrotated"/>
+                                <connections>
+                                    <segue destination="e5o-pQ-UqQ" kind="show" identifier="PlayerFiveSegue" id="3xs-sY-pSG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpt-MY-BCI">
+                                <rect key="frame" x="222" y="619" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="BBI-k8-QcI"/>
+                                    <constraint firstAttribute="height" constant="25" id="RBq-8H-SpT"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="floatingbuttonrotated"/>
+                                <connections>
+                                    <segue destination="e5o-pQ-UqQ" kind="show" identifier="PlayerSixSegue" id="ofz-QF-Wak"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixw-8r-Rfo">
+                                <rect key="frame" x="167" y="564" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="3MH-cK-Uca"/>
+                                    <constraint firstAttribute="width" constant="25" id="dye-Dw-t9A"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="floatingbuttonrotated"/>
+                                <connections>
+                                    <segue destination="e5o-pQ-UqQ" kind="show" identifier="PlayerThreeSegue" id="p9t-3G-SFV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ab7-of-tmu">
+                                <rect key="frame" x="222" y="103" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="K3F-Xr-n0e"/>
+                                    <constraint firstAttribute="width" constant="25" id="lV0-OG-cna"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="floatingbuttonrotated"/>
+                                <connections>
+                                    <segue destination="e5o-pQ-UqQ" kind="show" identifier="PlayerTwoSegue" id="a2E-08-dzk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABp-6s-GgT">
+                                <rect key="frame" x="167" y="306" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="FJs-jl-vBC"/>
+                                    <constraint firstAttribute="height" constant="25" id="Rc2-Nx-oPH"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="floatingbuttonrotated"/>
+                                <connections>
+                                    <segue destination="e5o-pQ-UqQ" kind="show" identifier="PlayerOneSegue" id="iwn-Fw-3Vc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="W1n-aD-646" firstAttribute="bottom" secondItem="phe-XW-Sfd" secondAttribute="bottom" id="0B2-0F-bIX"/>
+                            <constraint firstItem="deA-vR-xWB" firstAttribute="top" secondItem="e0X-tC-gdf" secondAttribute="bottom" constant="-40" id="2cW-vP-8ha"/>
+                            <constraint firstItem="SDx-uH-36A" firstAttribute="leading" secondItem="Xpt-MY-BCI" secondAttribute="trailing" constant="-40" id="823-Xr-o6m"/>
+                            <constraint firstItem="ABp-6s-GgT" firstAttribute="leading" secondItem="35N-CQ-LFJ" secondAttribute="trailing" constant="-40" id="8mm-ix-jFu"/>
+                            <constraint firstItem="SDx-uH-36A" firstAttribute="top" secondItem="Xpt-MY-BCI" secondAttribute="bottom" constant="-40" id="FTw-T1-61C"/>
+                            <constraint firstItem="ixw-8r-Rfo" firstAttribute="leading" secondItem="FC9-g1-A7E" secondAttribute="trailing" constant="-40" id="I4f-IA-wK5"/>
+                            <constraint firstItem="NPR-uB-Zuu" firstAttribute="top" secondItem="ab7-of-tmu" secondAttribute="bottom" constant="-40" id="Mvk-Hh-ZDd"/>
+                            <constraint firstItem="gdf-fm-E4J" firstAttribute="leading" secondItem="0CR-lx-kS2" secondAttribute="trailing" constant="-40" id="Vi2-Rs-8iw"/>
+                            <constraint firstItem="ixw-8r-Rfo" firstAttribute="top" secondItem="FC9-g1-A7E" secondAttribute="bottom" constant="-40" id="bl3-9f-Xv5"/>
+                            <constraint firstItem="phe-XW-Sfd" firstAttribute="top" secondItem="W1n-aD-646" secondAttribute="top" id="e1D-PD-pRU"/>
+                            <constraint firstItem="gdf-fm-E4J" firstAttribute="top" secondItem="0CR-lx-kS2" secondAttribute="bottom" constant="-40" id="eeg-bn-0hn"/>
+                            <constraint firstItem="ABp-6s-GgT" firstAttribute="top" secondItem="35N-CQ-LFJ" secondAttribute="bottom" constant="-40" id="lyx-bW-c3h"/>
+                            <constraint firstItem="phe-XW-Sfd" firstAttribute="leading" secondItem="W1n-aD-646" secondAttribute="leading" id="opV-bE-pXK"/>
+                            <constraint firstItem="deA-vR-xWB" firstAttribute="leading" secondItem="e0X-tC-gdf" secondAttribute="trailing" constant="-40" id="qII-Ix-dwU"/>
+                            <constraint firstItem="W1n-aD-646" firstAttribute="trailing" secondItem="phe-XW-Sfd" secondAttribute="trailing" id="sJV-jq-2Fe"/>
+                            <constraint firstItem="NPR-uB-Zuu" firstAttribute="leading" secondItem="ab7-of-tmu" secondAttribute="trailing" constant="-40" id="zsv-gU-4f9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="W1n-aD-646"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VFd-ub-TJ4"/>
+                    <connections>
+                        <outlet property="bottom_leftTableView" destination="0CR-lx-kS2" id="lYQ-VC-xOU"/>
+                        <outlet property="bottom_rightTableView" destination="SDx-uH-36A" id="xJu-3Q-q3n"/>
+                        <outlet property="middle_leftTableView" destination="FC9-g1-A7E" id="MOR-4g-Qv6"/>
+                        <outlet property="middle_rightTableView" destination="deA-vR-xWB" id="zKe-lL-1er"/>
+                        <outlet property="stackView" destination="UUI-HZ-PL7" id="FBs-Xh-0bc"/>
+                        <outlet property="top_leftTableView" destination="35N-CQ-LFJ" id="aH1-D5-4sf"/>
+                        <outlet property="top_rightTableView" destination="NPR-uB-Zuu" id="gqt-Ln-Spy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p9Y-QF-XAy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873.91304347826099" y="-17.410714285714285"/>
+        </scene>
+        <!--PlayerMenuVC-->
+        <scene sceneID="pzv-tR-W93">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PlayerMenu" referencedIdentifier="PlayerMenuVC" id="e5o-pQ-UqQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u7l-Zg-sJ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1560" y="-17"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eeE-FP-lT3">
+            <objects>
+                <navigationController storyboardIdentifier="SixPlayerNavigationVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2k6-8j-doB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mln-ST-tfa">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GmM-eB-WKU" kind="relationship" relationship="rootViewController" id="88P-a7-Coj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QZ9-Vj-oaM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-36.231884057971016" y="-17.410714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="floatingbuttonrotated" width="17" height="17"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="a2E-08-dzk"/>
+    </inferredMetricsTieBreakers>
+</document>

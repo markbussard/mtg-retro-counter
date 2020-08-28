@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Standard Two Player View Controller-->
+        <scene sceneID="f7h-UA-0up">
+            <objects>
+                <viewController storyboardIdentifier="StandardTwoPlayerVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ahn-tt-Qxx" customClass="StandardTwoPlayerViewController" customModule="MTG_Retro_Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q7q-QX-iHr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5xX-ow-kn0">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gbj-dp-Rat" userLabel="Top Table View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="387"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Fe-mf-FES">
+                                        <rect key="frame" x="0.0" y="387" width="414" height="387"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaj-uk-zMm">
+                                <rect key="frame" x="10" y="435" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="m4D-UG-4ee"/>
+                                    <constraint firstAttribute="width" constant="30" id="rRU-Xj-BtJ"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="floatingbutton"/>
+                                <connections>
+                                    <segue destination="hxN-lB-ssn" kind="show" identifier="PlayerOneSegue" id="yTh-zc-49I"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZC-ZJ-4d7">
+                                <rect key="frame" x="374" y="485" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dOA-j5-GG4"/>
+                                    <constraint firstAttribute="width" constant="30" id="jFm-Gr-DV3"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="floatingbutton"/>
+                                <connections>
+                                    <segue destination="hxN-lB-ssn" kind="show" identifier="PlayerTwoSegue" id="vL7-9O-f40"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qaj-uk-zMm" firstAttribute="top" secondItem="Gbj-dp-Rat" secondAttribute="bottom" constant="-40" id="JSn-Ez-bQm"/>
+                            <constraint firstItem="5xX-ow-kn0" firstAttribute="leading" secondItem="Iu1-TT-j7S" secondAttribute="leading" id="Trj-sY-SO4"/>
+                            <constraint firstItem="Gbj-dp-Rat" firstAttribute="leading" secondItem="qaj-uk-zMm" secondAttribute="trailing" constant="-40" id="aO5-le-aGF"/>
+                            <constraint firstItem="5xX-ow-kn0" firstAttribute="top" secondItem="Iu1-TT-j7S" secondAttribute="top" id="aRf-aa-tJ7"/>
+                            <constraint firstItem="RZC-ZJ-4d7" firstAttribute="leading" secondItem="5Fe-mf-FES" secondAttribute="trailing" constant="-40" id="gN8-I6-dBh"/>
+                            <constraint firstItem="5Fe-mf-FES" firstAttribute="top" secondItem="RZC-ZJ-4d7" secondAttribute="bottom" constant="-40" id="mGd-CB-Qe2"/>
+                            <constraint firstItem="Iu1-TT-j7S" firstAttribute="bottom" secondItem="5xX-ow-kn0" secondAttribute="bottom" id="p9r-iM-cEd"/>
+                            <constraint firstItem="Iu1-TT-j7S" firstAttribute="trailing" secondItem="5xX-ow-kn0" secondAttribute="trailing" id="pvB-K9-gzF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Iu1-TT-j7S"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="A4T-KV-Kzv"/>
+                    <connections>
+                        <outlet property="bottomTableView" destination="5Fe-mf-FES" id="G9d-fQ-6ay"/>
+                        <outlet property="topTableView" destination="Gbj-dp-Rat" id="zQp-pM-ISi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tWX-HF-vDR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902.89855072463774" y="162.72321428571428"/>
+        </scene>
+        <!--PlayerMenuVC-->
+        <scene sceneID="c3Q-Iz-UBB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PlayerMenu" referencedIdentifier="PlayerMenuVC" id="hxN-lB-ssn" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AXM-AK-l6k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1601" y="176"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4pX-yX-LL1">
+            <objects>
+                <navigationController storyboardIdentifier="StandardTwoPlayerNavigationVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NUn-uO-pEq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="27w-rO-vGx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ahn-tt-Qxx" kind="relationship" relationship="rootViewController" id="ehm-De-QMZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jk5-CN-EtK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7.2463768115942031" y="162.72321428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="floatingbutton" width="17" height="17"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="yTh-zc-49I"/>
+    </inferredMetricsTieBreakers>
+</document>

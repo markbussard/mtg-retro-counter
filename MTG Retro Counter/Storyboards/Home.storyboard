@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d1C-we-HaX">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--StandardTwoPlayerVC-->
+        <scene sceneID="EEm-cr-NLD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="StandardTwoPlayer" referencedIdentifier="StandardTwoPlayerVC" id="K4r-Ya-5cI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7b5-bC-HPu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2694" y="23"/>
+        </scene>
+        <!--TwoPlayerVC-->
+        <scene sceneID="cXc-Mt-stn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TwoPlayer" referencedIdentifier="TwoPlayerVC" id="J6H-Tn-ohh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HhA-Ci-NEz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2662" y="96"/>
+        </scene>
+        <!--NumberOfPlayersVC-->
+        <scene sceneID="zfS-3Y-GOJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NumberOfPlayers" referencedIdentifier="NumberOfPlayersVC" id="lv8-bd-aZx" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oAH-Rx-Dgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2694" y="201"/>
+        </scene>
+        <!--HomeVC-->
+        <scene sceneID="9A1-hH-QJA">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" title="HomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3tA-Vn-yK7" customClass="HomeViewController" customModule="MTG_Retro_Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wwo-kz-JIk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homescreen_background" translatesAutoresizingMaskIntoConstraints="NO" id="md7-6v-Fnc">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homescreen_title" translatesAutoresizingMaskIntoConstraints="NO" id="fjF-Hx-Men">
+                                <rect key="frame" x="0.0" y="88" width="414" height="363"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uC9-53-z6G">
+                                <rect key="frame" x="20" y="471" width="374" height="250"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKy-Jk-SMj">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="80"/>
+                                        <state key="normal" backgroundImage="standardbutton"/>
+                                        <connections>
+                                            <segue destination="K4r-Ya-5cI" kind="show" id="6qg-bi-jVR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f99-lW-vzJ">
+                                        <rect key="frame" x="0.0" y="85" width="374" height="80"/>
+                                        <state key="normal" backgroundImage="commanderbutton2p"/>
+                                        <connections>
+                                            <segue destination="J6H-Tn-ohh" kind="show" id="0fA-IF-ZKM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTW-s4-3jP">
+                                        <rect key="frame" x="0.0" y="170" width="374" height="80"/>
+                                        <state key="normal" backgroundImage="commanderbuttonmulti"/>
+                                        <connections>
+                                            <segue destination="lv8-bd-aZx" kind="show" id="dVM-ii-3dr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="go6-PF-FNU"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h0E-9P-2iI">
+                                <rect key="frame" x="35" y="811" width="344" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="yuq-yo-bWP"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="woS-pd-4nr">
+                                <rect key="frame" x="20" y="741" width="374" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6Z-ce-9eI">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="iO6-aF-bWQ"/>
+                                            <constraint firstAttribute="width" constant="50" id="oJF-S4-C3f"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="tapped_out_icon"/>
+                                        <connections>
+                                            <action selector="tcgPlayerButtonPressed:" destination="3tA-Vn-yK7" eventType="touchUpInside" id="n4h-Q2-NBD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iky-7t-l27">
+                                        <rect key="frame" x="162" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="RcO-aJ-o6x"/>
+                                            <constraint firstAttribute="height" constant="50" id="Wev-5y-dqn"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="facebook_icon"/>
+                                        <connections>
+                                            <action selector="facebookButtonPressed:" destination="3tA-Vn-yK7" eventType="touchUpInside" id="f4N-GA-3rj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKT-Zn-iny">
+                                        <rect key="frame" x="324" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Fdz-Oh-AND"/>
+                                            <constraint firstAttribute="height" constant="50" id="qPD-hZ-cjt"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="DMT_Logo(1)"/>
+                                        <connections>
+                                            <action selector="aboutUsPressed:" destination="3tA-Vn-yK7" eventType="touchUpInside" id="75q-u6-Zfv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="h0E-9P-2iI" secondAttribute="bottom" constant="10" id="1Es-gK-Ky1"/>
+                            <constraint firstItem="h0E-9P-2iI" firstAttribute="leading" secondItem="se6-0Z-hbi" secondAttribute="leading" constant="35" id="2pF-up-7Gc"/>
+                            <constraint firstItem="fjF-Hx-Men" firstAttribute="top" secondItem="se6-0Z-hbi" secondAttribute="top" id="3Th-Ul-7UI"/>
+                            <constraint firstItem="woS-pd-4nr" firstAttribute="leading" secondItem="se6-0Z-hbi" secondAttribute="leading" constant="20" id="5qx-uq-QFJ"/>
+                            <constraint firstItem="se6-0Z-hbi" firstAttribute="trailing" secondItem="uC9-53-z6G" secondAttribute="trailing" constant="20" id="7i1-LB-zVI"/>
+                            <constraint firstItem="h0E-9P-2iI" firstAttribute="centerX" secondItem="woS-pd-4nr" secondAttribute="centerX" id="8iQ-5o-4jv"/>
+                            <constraint firstAttribute="bottom" secondItem="md7-6v-Fnc" secondAttribute="bottom" id="GJ5-ZF-Vz8"/>
+                            <constraint firstItem="md7-6v-Fnc" firstAttribute="leading" secondItem="Wwo-kz-JIk" secondAttribute="leading" id="Jyy-fb-XvV"/>
+                            <constraint firstItem="h0E-9P-2iI" firstAttribute="top" secondItem="woS-pd-4nr" secondAttribute="bottom" constant="20" id="O2X-bh-dZG"/>
+                            <constraint firstItem="uC9-53-z6G" firstAttribute="leading" secondItem="se6-0Z-hbi" secondAttribute="leading" constant="20" id="OvV-7d-rpf"/>
+                            <constraint firstItem="se6-0Z-hbi" firstAttribute="trailing" secondItem="woS-pd-4nr" secondAttribute="trailing" constant="20" id="TGr-pv-7IZ"/>
+                            <constraint firstItem="woS-pd-4nr" firstAttribute="top" secondItem="uC9-53-z6G" secondAttribute="bottom" constant="20" id="XCY-dW-1q6"/>
+                            <constraint firstAttribute="trailing" secondItem="md7-6v-Fnc" secondAttribute="trailing" id="dlh-8y-Dcy"/>
+                            <constraint firstItem="md7-6v-Fnc" firstAttribute="top" secondItem="se6-0Z-hbi" secondAttribute="top" id="fSz-fe-RDl"/>
+                            <constraint firstItem="fjF-Hx-Men" firstAttribute="trailing" secondItem="se6-0Z-hbi" secondAttribute="trailing" id="mKG-0Q-ge1"/>
+                            <constraint firstItem="fjF-Hx-Men" firstAttribute="leading" secondItem="se6-0Z-hbi" secondAttribute="leading" id="ooM-VP-HeZ"/>
+                            <constraint firstItem="se6-0Z-hbi" firstAttribute="trailing" secondItem="h0E-9P-2iI" secondAttribute="trailing" constant="35" id="qmw-Hk-u91"/>
+                            <constraint firstItem="uC9-53-z6G" firstAttribute="top" secondItem="fjF-Hx-Men" secondAttribute="bottom" constant="20" id="xcy-uz-7qg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="se6-0Z-hbi"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tA5-Nj-j6u"/>
+                    <connections>
+                        <outlet property="imageView" destination="h0E-9P-2iI" id="mFo-yd-tPz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tbr-Ns-7bP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2100" y="58.928571428571423"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5zD-Zo-CWy">
+            <objects>
+                <navigationController storyboardIdentifier="HomeNavigationVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="d1C-we-HaX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7q5-bF-alv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3tA-Vn-yK7" kind="relationship" relationship="rootViewController" id="Vza-lF-duN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sy8-oi-Oll" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1189.8550724637682" y="58.928571428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="DMT_Logo(1)" width="800" height="600"/>
+        <image name="commanderbutton2p" width="800" height="250"/>
+        <image name="commanderbuttonmulti" width="800" height="250"/>
+        <image name="facebook_icon" width="256" height="256"/>
+        <image name="homescreen_background" width="920" height="1600"/>
+        <image name="homescreen_title" width="920" height="496"/>
+        <image name="standardbutton" width="800" height="250"/>
+        <image name="tapped_out_icon" width="457" height="621"/>
+    </resources>
+</document>

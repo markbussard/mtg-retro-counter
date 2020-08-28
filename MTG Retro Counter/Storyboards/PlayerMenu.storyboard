@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Player Menu View Controller-->
+        <scene sceneID="lUU-1E-Oil">
+            <objects>
+                <viewController storyboardIdentifier="PlayerMenuVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gsz-rq-lgv" customClass="PlayerMenuViewController" customModule="MTG_Retro_Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zwZ-1P-hVy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ihY-Qw-qkb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yD0-Vk-o7M">
+                                <rect key="frame" x="70" y="812" width="274" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZEP-43-cdX"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="donebuttoncropped"/>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="gsz-rq-lgv" eventType="touchUpInside" id="Hms-k8-fSE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ihY-Qw-qkb" firstAttribute="leading" secondItem="jba-PT-ZGy" secondAttribute="leading" id="E0e-ey-cRZ"/>
+                            <constraint firstItem="yD0-Vk-o7M" firstAttribute="centerX" secondItem="jba-PT-ZGy" secondAttribute="centerX" id="S8g-3A-lfZ"/>
+                            <constraint firstItem="jba-PT-ZGy" firstAttribute="trailing" secondItem="ihY-Qw-qkb" secondAttribute="trailing" id="WKQ-aD-MDO"/>
+                            <constraint firstItem="jba-PT-ZGy" firstAttribute="trailing" secondItem="yD0-Vk-o7M" secondAttribute="trailing" constant="70" id="ZHG-mc-iaC"/>
+                            <constraint firstItem="jba-PT-ZGy" firstAttribute="bottom" secondItem="ihY-Qw-qkb" secondAttribute="bottom" id="cfh-4B-wGM"/>
+                            <constraint firstItem="ihY-Qw-qkb" firstAttribute="top" secondItem="jba-PT-ZGy" secondAttribute="top" id="czp-4g-Ije"/>
+                            <constraint firstItem="yD0-Vk-o7M" firstAttribute="leading" secondItem="jba-PT-ZGy" secondAttribute="leading" constant="70" id="nic-O0-fJP"/>
+                            <constraint firstItem="jba-PT-ZGy" firstAttribute="bottom" secondItem="yD0-Vk-o7M" secondAttribute="bottom" id="th8-5F-reS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jba-PT-ZGy"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hqs-Pv-Xvd"/>
+                    <connections>
+                        <outlet property="tableView" destination="ihY-Qw-qkb" id="vQy-db-eNv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jqW-xY-IAs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1118.840579710145" y="38.839285714285715"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AtT-9v-uDh">
+            <objects>
+                <navigationController storyboardIdentifier="PlayerMenuNavigationVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xcS-en-SIK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="63m-5n-kUE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gsz-rq-lgv" kind="relationship" relationship="rootViewController" id="jyz-19-qre"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jvc-x8-D1T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181" y="39"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="donebuttoncropped" width="800" height="250"/>
+    </resources>
+</document>

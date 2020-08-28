@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Number Of Players View Controller-->
+        <scene sceneID="DTK-pg-Jz5">
+            <objects>
+                <viewController storyboardIdentifier="NumberOfPlayersVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vDq-y4-d95" customClass="NumberOfPlayersViewController" customModule="MTG_Retro_Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="77u-zx-ScA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TLL-rO-j48">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="KOG-QQ-0hj">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="387"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wm-nu-bLM">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="387"/>
+                                                <state key="normal" backgroundImage="three_player_button"/>
+                                                <connections>
+                                                    <segue destination="Ij0-Uc-suF" kind="show" id="cIX-Ax-CVt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xdf-Oc-tfM">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="387"/>
+                                                <state key="normal" backgroundImage="four_player_button"/>
+                                                <connections>
+                                                    <segue destination="tFg-yQ-klg" kind="show" id="3qD-HI-aDT"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="c4a-Aa-wjs">
+                                        <rect key="frame" x="0.0" y="387" width="414" height="387"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vK8-eZ-UsY">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="387"/>
+                                                <state key="normal" backgroundImage="five_player_button"/>
+                                                <connections>
+                                                    <segue destination="Brq-uN-iBF" kind="show" id="IjD-hL-eAT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4i6-9w-yCr">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="387"/>
+                                                <state key="normal" backgroundImage="six_player_button"/>
+                                                <connections>
+                                                    <segue destination="4YN-ZL-9T0" kind="show" id="gXb-VM-vrE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GKG-Fc-pD7" firstAttribute="bottom" secondItem="TLL-rO-j48" secondAttribute="bottom" id="6BF-0P-aXU"/>
+                            <constraint firstItem="TLL-rO-j48" firstAttribute="leading" secondItem="GKG-Fc-pD7" secondAttribute="leading" id="M00-Ql-XPe"/>
+                            <constraint firstItem="TLL-rO-j48" firstAttribute="top" secondItem="GKG-Fc-pD7" secondAttribute="top" id="gfa-aj-RUJ"/>
+                            <constraint firstItem="GKG-Fc-pD7" firstAttribute="trailing" secondItem="TLL-rO-j48" secondAttribute="trailing" id="tWL-Yf-8CJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GKG-Fc-pD7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="J7M-Zg-8nj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gCw-zl-bva" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900.00000000000011" y="8.7053571428571423"/>
+        </scene>
+        <!--ThreePlayerVC-->
+        <scene sceneID="qje-Qj-o7c">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ThreePlayer" referencedIdentifier="ThreePlayerVC" id="Ij0-Uc-suF" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fUW-t2-k80" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1640" y="-25"/>
+        </scene>
+        <!--FivePlayerVC-->
+        <scene sceneID="yG8-ba-5pQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FivePlayer" referencedIdentifier="FivePlayerVC" id="Brq-uN-iBF" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aJH-vC-5BB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1632" y="43"/>
+        </scene>
+        <!--SixPlayerVC-->
+        <scene sceneID="iSA-hz-zjU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SixPlayer" referencedIdentifier="SixPlayerVC" id="4YN-ZL-9T0" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z2D-8F-Bhh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1628" y="82"/>
+        </scene>
+        <!--FourPlayerVC-->
+        <scene sceneID="awr-Xf-2Z4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FourPlayer" referencedIdentifier="FourPlayerVC" id="tFg-yQ-klg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D0w-4p-KBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1634" y="9"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bKI-1j-uXs">
+            <objects>
+                <navigationController storyboardIdentifier="NumberOfPlayersNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MKy-YI-u5b" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HOU-qy-6J3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vDq-y4-d95" kind="relationship" relationship="rootViewController" id="I2E-xy-0ur"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4uM-AQ-GVZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10.144927536231885" y="8.7053571428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="five_player_button" width="200" height="320"/>
+        <image name="four_player_button" width="200" height="320"/>
+        <image name="six_player_button" width="200" height="320"/>
+        <image name="three_player_button" width="200" height="320"/>
+    </resources>
+</document>

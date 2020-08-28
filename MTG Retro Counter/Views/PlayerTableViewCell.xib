@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlayerTableViewCell" rowHeight="331" id="KGk-i7-Jjw" customClass="PlayerTableViewCell" customModule="MTG_Retro_Counter" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="486" height="331"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="486" height="330.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Zlp-c8-jMd">
+                        <rect key="frame" x="0.0" y="0.0" width="486" height="330.5"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4F-GG-De8">
+                                <rect key="frame" x="0.0" y="0.0" width="486" height="165.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="40">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerTopButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ewI-td-fL3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGj-gI-W7J">
+                                <rect key="frame" x="0.0" y="165.5" width="486" height="165"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Player">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerBottomButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="MUF-Le-f4R"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="Zlp-c8-jMd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="5q4-YA-qHc"/>
+                    <constraint firstAttribute="trailing" secondItem="Zlp-c8-jMd" secondAttribute="trailing" id="RRq-Kg-vZg"/>
+                    <constraint firstItem="Zlp-c8-jMd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="XVY-U6-dQ4"/>
+                    <constraint firstAttribute="bottom" secondItem="Zlp-c8-jMd" secondAttribute="bottom" id="mvY-el-vMP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="playerBottomButton" destination="nGj-gI-W7J" id="b0e-bx-43l"/>
+                <outlet property="playerTopButton" destination="U4F-GG-De8" id="rBY-KE-e1c"/>
+            </connections>
+            <point key="canvasLocation" x="163.768115942029" y="113.50446428571428"/>
+        </tableViewCell>
+    </objects>
+</document>

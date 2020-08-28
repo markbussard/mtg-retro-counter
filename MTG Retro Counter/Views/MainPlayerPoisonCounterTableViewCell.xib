@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="146" id="KGk-i7-Jjw" customClass="MainPlayerPoisonCounterTableViewCell" customModule="MTG_Retro_Counter" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="550" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="550" height="119.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gB0-BA-6r3">
+                        <rect key="frame" x="415" y="45" width="135" height="30"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nw3-Yc-jWW">
+                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="bc5-YI-7Tx"/>
+                                    <constraint firstAttribute="height" constant="30" id="j1a-Tc-vja"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="minusbutton"/>
+                                <connections>
+                                    <action selector="minusButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="kTI-pD-Kkh"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sjd-wz-NRO">
+                                <rect key="frame" x="30" y="0.0" width="75" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="u0Z-si-X9y"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Rd-Kn-hkB">
+                                <rect key="frame" x="105" y="0.0" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="I4H-RX-qpk"/>
+                                    <constraint firstAttribute="width" constant="30" id="sR9-wu-hNn"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="plus_button"/>
+                                <connections>
+                                    <action selector="plusButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Lvj-lf-sFq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poison Counter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5d-ki-sNW">
+                        <rect key="frame" x="0.0" y="47" width="147" height="25.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="r5d-ki-sNW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="e3O-x5-eQq"/>
+                    <constraint firstItem="gB0-BA-6r3" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hOA-YC-9Rt"/>
+                    <constraint firstItem="r5d-ki-sNW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="nmj-t0-v8B"/>
+                    <constraint firstAttribute="trailing" secondItem="gB0-BA-6r3" secondAttribute="trailing" id="snw-z6-mgs"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="playerPoisonCount" destination="Sjd-wz-NRO" id="qLd-8e-9SY"/>
+                <outlet property="poisonCounterLabel" destination="r5d-ki-sNW" id="N6c-jM-b3R"/>
+            </connections>
+            <point key="canvasLocation" x="-86" y="95"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="minusbutton" width="80" height="80"/>
+        <image name="plus_button" width="80" height="80"/>
+    </resources>
+</document>

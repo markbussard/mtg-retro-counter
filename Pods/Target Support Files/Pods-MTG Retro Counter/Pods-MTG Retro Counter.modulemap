@@ -1,0 +1,6 @@
+framework module Pods_MTG_Retro_Counter {
+  umbrella header "Pods-MTG Retro Counter-umbrella.h"
+
+  export *
+  module * { export * }
+}

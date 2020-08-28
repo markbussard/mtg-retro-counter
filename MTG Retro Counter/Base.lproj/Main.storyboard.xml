@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Two Player Standard-->
+        <scene sceneID="RdU-gD-gWh">
+            <objects>
+                <viewController id="UHZ-eJ-7RZ" customClass="TwoPlayerStandard" customModule="MTG_Retro_Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s1R-nz-wOr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pcU-Cw-TQR">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vgT-tb-tqj">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
+                                        <connections>
+                                            <segue destination="p6m-13-l89" kind="embed" id="TuY-es-nh8"/>
+                                        </connections>
+                                    </containerView>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KeX-Dt-ZSs">
+                                        <rect key="frame" x="0.0" y="323.5" width="375" height="323.5"/>
+                                        <connections>
+                                            <segue destination="PMn-e7-LKl" kind="embed" id="n4f-GH-NJe"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7z-7Q-axE">
+                                <rect key="frame" x="137.5" y="308.5" width="100" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.72026797279999999" blue="0.032315833170000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="K9u-cT-22Q"/>
+                                    <constraint firstAttribute="height" constant="50" id="VPZ-rg-IcY"/>
+                                </constraints>
+                                <state key="normal" title="Back Button"/>
+                                <connections>
+                                    <action selector="TPS_BackBtn:" destination="UHZ-eJ-7RZ" eventType="touchUpInside" id="EuG-dg-Qti"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pcU-Cw-TQR" firstAttribute="top" secondItem="kL2-cd-off" secondAttribute="top" id="610-n1-rh9"/>
+                            <constraint firstItem="pcU-Cw-TQR" firstAttribute="trailing" secondItem="kL2-cd-off" secondAttribute="trailing" id="Hgr-qj-MeP"/>
+                            <constraint firstItem="kL2-cd-off" firstAttribute="bottom" secondItem="pcU-Cw-TQR" secondAttribute="bottom" id="Rvd-Pp-xnk"/>
+                            <constraint firstItem="pcU-Cw-TQR" firstAttribute="leading" secondItem="kL2-cd-off" secondAttribute="leading" id="YbG-0l-9U8"/>
+                            <constraint firstItem="d7z-7Q-axE" firstAttribute="centerX" secondItem="s1R-nz-wOr" secondAttribute="centerX" id="aid-Ir-5le"/>
+                            <constraint firstItem="d7z-7Q-axE" firstAttribute="centerY" secondItem="s1R-nz-wOr" secondAttribute="centerY" id="dx6-Mw-bdz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kL2-cd-off"/>
+                    </view>
+                    <connections>
+                        <outlet property="TPS_P2Container" destination="vgT-tb-tqj" id="EyS-eq-bZp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ExG-M4-xIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.98550724637681" y="-598.66071428571422"/>
+        </scene>
+        <!--Two Player Commander-->
+        <scene sceneID="UNJ-zs-Uys">
+            <objects>
+                <viewController id="jJw-t9-yly" customClass="TwoPlayerCommander" customModule="MTG_Retro_Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wQ9-ym-jfE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Xyf-x8-8WG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gCm-7Q-baa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884" y="-599"/>
+        </scene>
+        <!--Three Player Commander-->
+        <scene sceneID="Ang-VG-EN0">
+            <objects>
+                <viewController id="WQm-kL-xUN" customClass="ThreePlayerCommander" customModule="MTG_Retro_Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="byA-xJ-IBd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="yEH-sy-wwp"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vcY-Pe-kdf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1687" y="-599"/>
+        </scene>
+        <!--Four Player Commander-->
+        <scene sceneID="5ka-VO-iaa">
+            <objects>
+                <viewController id="4aD-yU-h1M" customClass="FourPlayerCommander" customModule="MTG_Retro_Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f2g-ld-PF7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="2Hr-Fa-XvA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LRu-Tp-u7v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2416" y="-599"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MTG_Retro_Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zff-ih-HYF" userLabel="BackgroundColor">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YFM-TO-Nb7">
+                                <rect key="frame" x="20" y="237" width="335" height="250"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcJ-FV-cz3">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="70"/>
+                                        <state key="normal" title="Button" image="standardbutton"/>
+                                        <connections>
+                                            <segue destination="UHZ-eJ-7RZ" kind="show" identifier="toTPS" id="MT3-Vo-eNy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5J-b1-unq">
+                                        <rect key="frame" x="0.0" y="90" width="335" height="70"/>
+                                        <state key="normal" title="Button" image="commanderbutton2p"/>
+                                        <connections>
+                                            <segue destination="jJw-t9-yly" kind="show" identifier="toTPC" id="nrB-LV-Xew"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jkg-Hh-NCR">
+                                        <rect key="frame" x="0.0" y="180" width="335" height="70"/>
+                                        <state key="normal" title="Button" image="commanderbuttonmulti"/>
+                                        <connections>
+                                            <segue destination="DU2-EV-5jI" kind="show" identifier="toMultiSelectScreen" id="Kay-dt-azA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="lr2-Pz-PVW"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="I5n-aq-z8F">
+                                <rect key="frame" x="20" y="507" width="335" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjQ-MB-GhO">
+                                        <rect key="frame" x="20" y="8" width="50" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="8Xa-R0-P8K"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="tapped_out_icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYz-bv-aHX">
+                                        <rect key="frame" x="142.5" y="8" width="50" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Z18-fh-rli"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="facebook_icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1N-4T-n6X">
+                                        <rect key="frame" x="265" y="8" width="50" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="P94-J5-d7x"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Puzzle_Logo_Gear(1)"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="SZ0-eM-vXy"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="8" left="20" bottom="8" right="20"/>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tapped_out_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Sdi-h3-Bhz">
+                                <rect key="frame" x="10" y="577" width="355" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="r93-df-9KZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MTG RETRO COUNTER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qub-NS-ytP">
+                                <rect key="frame" x="18.5" y="126.5" width="338.5" height="30.5"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Zff-ih-HYF" secondAttribute="bottom" id="081-Ma-o1r"/>
+                            <constraint firstItem="qub-NS-ytP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="31u-vc-8bu"/>
+                            <constraint firstItem="Sdi-h3-Bhz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="46f-oZ-H9u"/>
+                            <constraint firstItem="I5n-aq-z8F" firstAttribute="top" secondItem="YFM-TO-Nb7" secondAttribute="bottom" constant="20" id="7P5-HI-KuD"/>
+                            <constraint firstItem="Zff-ih-HYF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AD8-zE-FOs"/>
+                            <constraint firstItem="I5n-aq-z8F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BOr-cq-Tif"/>
+                            <constraint firstItem="Sdi-h3-Bhz" firstAttribute="top" secondItem="I5n-aq-z8F" secondAttribute="bottom" constant="20" id="EKQ-jP-c50"/>
+                            <constraint firstItem="Sdi-h3-Bhz" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="10" id="KBO-7Q-qt8"/>
+                            <constraint firstItem="I5n-aq-z8F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="LcN-g0-rk1"/>
+                            <constraint firstItem="YFM-TO-Nb7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Z5D-rO-C1d"/>
+                            <constraint firstItem="Zff-ih-HYF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bLh-eY-kXe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sdi-h3-Bhz" secondAttribute="trailing" constant="10" id="kRT-U3-CZx"/>
+                            <constraint firstItem="I5n-aq-z8F" firstAttribute="top" secondItem="qub-NS-ytP" secondAttribute="bottom" constant="350" id="m26-2Y-UkH"/>
+                            <constraint firstAttribute="trailing" secondItem="YFM-TO-Nb7" secondAttribute="trailing" constant="20" id="nP2-6t-H1n"/>
+                            <constraint firstAttribute="trailing" secondItem="I5n-aq-z8F" secondAttribute="trailing" constant="20" id="rTJ-C1-BeR"/>
+                            <constraint firstItem="Zff-ih-HYF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xge-eA-w7F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.40000000000001" y="138.17733990147784"/>
+        </scene>
+        <!--multiplayerCommanderSelect-->
+        <scene sceneID="1Z3-wv-1Ab">
+            <objects>
+                <viewController id="DU2-EV-5jI" userLabel="multiplayerCommanderSelect" customClass="multiplayerCommanderScreen" customModule="MTG_Retro_Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ymd-z9-RST">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gFt-ER-GJu">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qn9-mQ-pj8">
+                                        <rect key="frame" x="4" y="0.0" width="367" height="323.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jo-pC-AX7">
+                                                <rect key="frame" x="0.0" y="0.0" width="183.5" height="323.5"/>
+                                                <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+                                                <state key="normal" title="Button" image="three_player_button"/>
+                                                <connections>
+                                                    <segue destination="WQm-kL-xUN" kind="show" identifier="to3PC" id="3BR-5o-tIZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAq-RY-csW">
+                                                <rect key="frame" x="183.5" y="0.0" width="183.5" height="323.5"/>
+                                                <state key="normal" title="Button" image="four_player_button"/>
+                                                <connections>
+                                                    <segue destination="4aD-yU-h1M" kind="show" identifier="to4PC" id="KmK-X9-J4B"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aAb-N0-mcs">
+                                        <rect key="frame" x="4" y="323.5" width="367" height="323.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvo-f6-mCE">
+                                                <rect key="frame" x="0.0" y="0.0" width="183.5" height="323.5"/>
+                                                <state key="normal" title="Button" image="five_player_button"/>
+                                                <connections>
+                                                    <segue destination="tmB-Yn-YCF" kind="show" identifier="to5PC" id="NJy-bN-PIW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bc4-Tg-kcH">
+                                                <rect key="frame" x="183.5" y="0.0" width="183.5" height="323.5"/>
+                                                <state key="normal" title="Button" image="six_player_button"/>
+                                                <connections>
+                                                    <segue destination="3JX-xn-LUo" kind="show" identifier="to6PC" id="ru5-UZ-axb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="0.0" left="4" bottom="0.0" right="4"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gFt-ER-GJu" firstAttribute="leading" secondItem="Ymd-z9-RST" secondAttribute="leading" id="0pv-Ic-q8p"/>
+                            <constraint firstItem="gFt-ER-GJu" firstAttribute="trailing" secondItem="Hut-Qe-TQU" secondAttribute="trailing" id="A34-Mr-Q7u"/>
+                            <constraint firstItem="Hut-Qe-TQU" firstAttribute="bottom" secondItem="gFt-ER-GJu" secondAttribute="bottom" id="Hff-Fm-B3U"/>
+                            <constraint firstItem="gFt-ER-GJu" firstAttribute="top" secondItem="Hut-Qe-TQU" secondAttribute="top" id="Tb8-a8-SNp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hut-Qe-TQU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4if-1g-LkF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="883" y="138"/>
+        </scene>
+        <!--Five Player Commander-->
+        <scene sceneID="YPY-zI-Y5r">
+            <objects>
+                <viewController id="tmB-Yn-YCF" customClass="FivePlayerCommander" customModule="MTG_Retro_Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6XH-F5-CUP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="2wG-k1-0Db"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sMn-hz-Fay" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1687" y="138"/>
+        </scene>
+        <!--Six Player Commander-->
+        <scene sceneID="sWS-lc-Brk">
+            <objects>
+                <viewController id="3JX-xn-LUo" customClass="SixPlayerCommander" customModule="MTG_Retro_Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2hb-LG-AX1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="LSU-Hg-L1r"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dvO-EI-N7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2416" y="138"/>
+        </scene>
+        <!--Standard Fragment-->
+        <scene sceneID="0RS-Xm-UGj">
+            <objects>
+                <viewController id="p6m-13-l89" customClass="P2StandardFragment" customModule="MTG_Retro_Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lC6-Zl-aDm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9dB-1a-THZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.53470311930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mMI-LK-kt2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="20" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OUF-Av-Bcd">
+                                        <rect key="frame" x="8" y="30" width="359" height="265"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="130"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAYER 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSM-8b-etq">
+                                        <rect key="frame" x="8" y="295" width="359" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="30" left="8" bottom="8" right="8"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3QN-KZ-c8U">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJB-Yx-2Eb" userLabel="p2SPlusBtn">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
+                                        <connections>
+                                            <action selector="p2SPlusBtn:" destination="p6m-13-l89" eventType="touchUpInside" id="KAn-hb-ZQc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6NK-2G-SKg" userLabel="p2SMinusBtn">
+                                        <rect key="frame" x="0.0" y="162" width="375" height="161.5"/>
+                                        <connections>
+                                            <action selector="P2SMinusBtn:" destination="p6m-13-l89" eventType="touchUpInside" id="Iqf-4q-kda"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9dB-1a-THZ" secondAttribute="trailing" id="0uS-N9-OqS"/>
+                            <constraint firstAttribute="trailing" secondItem="mMI-LK-kt2" secondAttribute="trailing" id="4CH-IE-bAa"/>
+                            <constraint firstItem="mMI-LK-kt2" firstAttribute="leading" secondItem="lC6-Zl-aDm" secondAttribute="leading" id="4fu-t9-NCE"/>
+                            <constraint firstAttribute="trailing" secondItem="3QN-KZ-c8U" secondAttribute="trailing" id="ANS-mR-9Oc"/>
+                            <constraint firstItem="9dB-1a-THZ" firstAttribute="leading" secondItem="lC6-Zl-aDm" secondAttribute="leading" id="Gr4-Q1-Tzr"/>
+                            <constraint firstAttribute="bottom" secondItem="3QN-KZ-c8U" secondAttribute="bottom" id="NdY-2X-iMJ"/>
+                            <constraint firstItem="3QN-KZ-c8U" firstAttribute="top" secondItem="lC6-Zl-aDm" secondAttribute="top" id="bPV-q5-QoC"/>
+                            <constraint firstAttribute="bottom" secondItem="mMI-LK-kt2" secondAttribute="bottom" id="mOF-ZX-ENP"/>
+                            <constraint firstItem="3QN-KZ-c8U" firstAttribute="leading" secondItem="lC6-Zl-aDm" secondAttribute="leading" id="nuU-l1-GLJ"/>
+                            <constraint firstAttribute="bottom" secondItem="9dB-1a-THZ" secondAttribute="bottom" id="wbp-YQ-Eje"/>
+                            <constraint firstItem="mMI-LK-kt2" firstAttribute="top" secondItem="lC6-Zl-aDm" secondAttribute="top" id="xAe-aC-FLb"/>
+                            <constraint firstItem="9dB-1a-THZ" firstAttribute="top" secondItem="lC6-Zl-aDm" secondAttribute="top" id="z6D-OV-vfr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3Tc-3o-Z5l"/>
+                    </view>
+                    <connections>
+                        <outlet property="p2LifeText" destination="OUF-Av-Bcd" id="OBG-ux-FBN"/>
+                        <outlet property="p2NameText" destination="QSM-8b-etq" id="4vS-n0-6ax"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S71-6j-2wb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-978" y="-766"/>
+        </scene>
+        <!--Standard Fragment-->
+        <scene sceneID="CH8-ww-rau">
+            <objects>
+                <viewController id="PMn-e7-LKl" customClass="P1StandardFragment" customModule="MTG_Retro_Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9VM-Bt-rVb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eWZ-e3-HGr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
+                                <color key="backgroundColor" red="0.2088273564" green="0.18764367809999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Obi-lF-nor">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="20" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MRc-Bd-q1H">
+                                        <rect key="frame" x="8" y="30" width="359" height="265"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="130"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAYER 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYM-Ra-CW5">
+                                        <rect key="frame" x="8" y="295" width="359" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="30" left="8" bottom="8" right="8"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XU1-7G-1rs">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDH-gS-3HC" userLabel="p1SPlusBtn">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
+                                        <connections>
+                                            <action selector="p1PlusBtn:" destination="PMn-e7-LKl" eventType="touchUpInside" id="HbX-dv-ABf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ve-mJ-CMd" userLabel="p1SMinusBtn">
+                                        <rect key="frame" x="0.0" y="162" width="375" height="161.5"/>
+                                        <connections>
+                                            <action selector="p1MinusBtn:" destination="PMn-e7-LKl" eventType="touchUpInside" id="eeq-Qz-6cM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Obi-lF-nor" firstAttribute="top" secondItem="9VM-Bt-rVb" secondAttribute="top" id="0NC-L3-sCX"/>
+                            <constraint firstAttribute="trailing" secondItem="eWZ-e3-HGr" secondAttribute="trailing" id="21D-tv-Ane"/>
+                            <constraint firstItem="Obi-lF-nor" firstAttribute="leading" secondItem="9VM-Bt-rVb" secondAttribute="leading" id="7c1-UZ-kax"/>
+                            <constraint firstAttribute="bottom" secondItem="Obi-lF-nor" secondAttribute="bottom" id="GJ9-l1-giB"/>
+                            <constraint firstItem="eWZ-e3-HGr" firstAttribute="top" secondItem="9VM-Bt-rVb" secondAttribute="top" id="O0v-wA-9Hk"/>
+                            <constraint firstItem="XU1-7G-1rs" firstAttribute="top" secondItem="9VM-Bt-rVb" secondAttribute="top" id="Qu2-C7-Ywj"/>
+                            <constraint firstAttribute="trailing" secondItem="Obi-lF-nor" secondAttribute="trailing" id="kxc-kl-wJ4"/>
+                            <constraint firstItem="eWZ-e3-HGr" firstAttribute="leading" secondItem="9VM-Bt-rVb" secondAttribute="leading" id="pWt-4e-R5o"/>
+                            <constraint firstAttribute="bottom" secondItem="eWZ-e3-HGr" secondAttribute="bottom" id="sVu-9l-Qj1"/>
+                            <constraint firstAttribute="trailing" secondItem="XU1-7G-1rs" secondAttribute="trailing" id="wYX-kZ-qif"/>
+                            <constraint firstItem="XU1-7G-1rs" firstAttribute="leading" secondItem="9VM-Bt-rVb" secondAttribute="leading" id="x62-Qq-n8E"/>
+                            <constraint firstAttribute="bottom" secondItem="XU1-7G-1rs" secondAttribute="bottom" id="xEI-pf-dkf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hep-Wy-9Ze"/>
+                    </view>
+                    <connections>
+                        <outlet property="p1LifeText" destination="MRc-Bd-q1H" id="dRN-lI-c0M"/>
+                        <outlet property="p1NameText" destination="HYM-Ra-CW5" id="wiC-oE-NWu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LzC-Vv-Mho" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-978" y="-418"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Puzzle_Logo_Gear(1)" width="800" height="600"/>
+        <image name="commanderbutton2p" width="800" height="250"/>
+        <image name="commanderbuttonmulti" width="800" height="250"/>
+        <image name="facebook_icon" width="256" height="256"/>
+        <image name="five_player_button" width="200" height="320"/>
+        <image name="four_player_button" width="200" height="320"/>
+        <image name="six_player_button" width="200" height="320"/>
+        <image name="standardbutton" width="800" height="250"/>
+        <image name="tapped_out_icon" width="457" height="621"/>
+        <image name="tapped_out_logo" width="2048" height="715"/>
+        <image name="three_player_button" width="200" height="320"/>
+    </resources>
+</document>
